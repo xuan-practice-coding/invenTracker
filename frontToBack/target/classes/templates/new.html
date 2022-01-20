@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="www.thymeleaf.org">
+<meta>
+  <meta charset="utf-8" />
+  <title>Create New Product</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+  <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+</meta>
+<body>
+<div align="center">
+  <h1>Create New Product</h1>
+  <br />
+  <div class="col-sm-4">
+    <form action="#" th:action="@{/save}" th:object="${product}" method="post">
+        <div alight="left">
+        <tr>
+          <label class="form-label">Product ID</label>
+          <td>
+            <input type="text" th:field="*{pid}" class="form-control" placeholder="Product ID"  />
+          </td>
+        </tr>
+      </div>
+        <div alight="left">
+            <tr>
+                <label class="form-label" >Product Name</label>
+                <td>
+                    <input type="text" th:field="*{pname}" class="form-control" placeholder="Product Name" />
+                </td>
+            </tr>
+        </div>
+      <div alight="left">
+        <tr>
+          <label class="form-label" >Purchase Price</label>
+          <td>
+            <input type="text" th:field="*{purchprice}" class="form-control" placeholder="Purchase Price" />
+          </td>
+        </tr>
+      </div>
+        <div alight="left">
+          <tr>
+            <label class="form-label" >Inventory Count</label>
+            <td>
+              <input type="text" th:field="*{inventcount}" class="form-control" placeholder="Inventory Count" />
+            </td>
+          </tr>
+        </div>
+        <div alight="left">
+        <tr>
+          <label class="form-label">Tag</label>
+          <td><input type="text" th:field="*{tag}" class="form-control" placeholder="Product Tag" /></td>
+        </tr>
+        </div>
+      <div alight="left">
+        <tr>
+          <label class="form-label" >Group</label>
+          <td><input type="text" th:field="*{pgroup}" class="form-control" placeholder="Product Group" /></td>
+        </tr>
+      </div>
+      <br>
+      <tr>
+        <td colspan="2"><button type="submit" class="btn btn-info">Save</button> </td>
+      </tr>
+      </table>
+    </form>
+  </div>
+</div>
+</body>
+</html>

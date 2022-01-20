@@ -1,0 +1,11 @@
+26
+
+
+4
+DROP TABLE IF EXISTS `transactions`;
+CREATE TABLE `transactions` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `purchase_date` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `transactions` (`purchase_date`) VALUES (NULL)
